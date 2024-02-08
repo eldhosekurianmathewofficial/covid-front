@@ -3,12 +3,12 @@ import axios from "axios";
 const Add = () => {
     const[input,setInput]=new useState([
         {
-            Name:"",
-            Flag:"",
-            Continent:"",
-            Formedon:"",
-            CurrentPresident:"",
-            OfficialLanguage:""
+    name:"",
+    address:"",
+    age:"",
+    mobile:"",
+    symptoms:"",
+    CovidStatus:""
         }
     ])
     const inputHandler=(event)=>{
@@ -38,30 +38,30 @@ const Add = () => {
                 <div className="row g-3">
                     <div className="col col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label htmlFor="" className="form-lab">Name</label>
-                        <input type="text" className="form-control" name="Name" value={input.Name} onChange={inputHandler} />
+                        <input type="text" className="form-control" name="name" value={input.name} onChange={inputHandler} />
                     </div>
                     <div className="col col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label htmlFor="" className="form-lab">Flag</label>
-                        <input type="text" className="form-control" name="Flag" value={input.Flag} onChange={inputHandler}/>
+                    <label htmlFor="" className="form-lab">address</label>
+                        <input type="text" className="form-control" name="address" value={input.address} onChange={inputHandler}/>
                     </div>
                     <div className="col col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label htmlFor="" className="form-lab">Continent</label>
-                        <input type="text" className="form-control" name="Continent" value={input.Continent} onChange={inputHandler}/>
+                    <label htmlFor="" className="form-lab">age</label>
+                        <input type="text" className="form-control" name="age" value={input.age} onChange={inputHandler}/>
                     </div>
                     <div className="col col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label htmlFor="" className="form-lab">Formed on</label>
-                        <input type="text" className="form-control" name="Formedon" value={input.Formedon} onChange={inputHandler} />
+                    <label htmlFor="" className="form-lab">mobile</label>
+                        <input type="text" className="form-control" name="mobile" value={input.mobile} onChange={inputHandler} />
                     </div>
                     <div className="col col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label htmlFor="" className="form-lab">Current President</label>
-                        <input type="text" className="form-control" name="CurrentPresident" value={input.CurrentPresident} onChange={inputHandler} />
+                    <label htmlFor="" className="form-lab">symptoms</label>
+                        <input type="text" className="form-control" name="symptoms" value={input.symptoms} onChange={inputHandler} />
                     </div>
                     <div className="col col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label htmlFor="" className="form-lab">Official Language</label>
-                        <input type="text" className="form-control" name="OfficialLanguage" value={input.OfficialLanguage} onChange={inputHandler}/>
+                    <label htmlFor="" className="form-lab">CovidStatus</label>
+                        <input type="text" className="form-control" name="CovidStatus" value={input.CovidStatus} onChange={inputHandler}/>
                     </div>
                     <div className="col col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <button className="btn btn-success" onClick={readValues}>Add Country</button>
+                        <button className="btn btn-success" onClick={readValues}>Add</button>
                     </div>
                 </div>
             </div>
