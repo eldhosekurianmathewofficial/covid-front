@@ -6,10 +6,10 @@ const NavBar = () => {
       
       <nav class="navbar navbar-expand-lg " style={{backgroundColor:"#E5BFEE",border: "2px solid black"} } >
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="https://e7.pngegg.com/pngimages/689/342/png-clipart-globe-flags-of-the-world-country-world-miscellaneous-flag.png" height="30" width="30"/>
+          <a class="navbar-brand" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/1020px-SARS-CoV-2_without_background.png" height="30" width="30"/>
             
           </a>
-          Country App
+          Covid App
           <button
             class="navbar-toggler"
             type="button"
@@ -30,17 +30,17 @@ const NavBar = () => {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/">
-                  Add Country 
+                  Add Patient
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/view">
-                  View Country
+                  View 
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/search">
-                  SearchCountry
+                  Search Patient
                 </a>
               </li>
              

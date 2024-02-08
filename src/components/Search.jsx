@@ -5,7 +5,7 @@ const Search = () => {
 
     //for getting input
 const[input,setInput]= useState({
-    Name:""
+    name:""
 })
 const inputHandler=(event)=>{
     setInput({...input,[event.target.name]:event.target.value})
@@ -14,8 +14,8 @@ const inputHandler=(event)=>{
 
 const [ out,setOutput ]=useState([])
 const readvalues=()=>{
-    axios.post("http://localhost:3005/api/country/search",input).then((response)=>{
-        setOutput(response.data.countrydat)
+    axios.post("http://localhost:3001/api/country/search",input).then((response)=>{
+        setOutput(response.data)
     })
 }
 useEffect(()=>{readvalues()},[])
@@ -38,34 +38,40 @@ useEffect(()=>{readvalues()},[])
             </div>
             <br></br>
             <div className="container">
-    <div className="row">
-        <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div className="row g-3">
-            {
-                            out.map((value,index) => {
-                                    return <div className="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex">
-
-                                        <div class="card" >
-                                            <img src={value.Flag} class="card-img-top" alt="..."/>
-                                            
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Name: {value.Name}</h5>
-                                                    <p class="card-text">Continent: {value.Continent}</p>
-                                                    <p class="card-text">Formed on: {value.Formedon}</p>
-                                                    <p class="card-text">Current President: {value.CurrentPresident}</p>
-                                                    <p class="card-text">Official Language: {value.OfficialLanguage}</p>
-                                                </div>
-                                        </div>
-
-                                    </div>
-                                }
-                            )
-                        }
+        <div className="row">
+            <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">name:</th>
+      <th scope="col">address:</th>
+      <th scope="col">age:</th>
+      <th scope="col">Mobile:</th>
+      <th scope="col">symptoms:</th>
+      <th scope="col">Expense:</th>
+    </tr>
+  </thead>
+  <tbody>
+  {
+    out.map((value,index)=>{
+        return  <tr>
+        <th scope="row">{value.name}</th>
+        <td>{value.address}</td>
+        <td>{value.age}</td>
+        <td>{value.mobile}</td>
+        <td>{value.symptoms}</td>
+        <td>{value.CovidStatus}</td>
+      </tr>
+    })
+  }
+    
+  </tbody>
+</table>
+            </div>
+        </div>
+      </div>
 </div>
-</div>
-</div>
-</div>
-    </div>
+    
   )
 }
 
