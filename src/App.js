@@ -12,6 +12,8 @@ function App() {
       <BrowserRouter>
       <Routes>
       <Route path="/" element={<><NavBar/><Add/></>}/>
+      <Route path="/view" element={<><NavBar/><View/></>}/>
+ 
   
 
         </Routes>
