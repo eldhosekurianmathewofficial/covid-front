@@ -13,7 +13,7 @@ function App() {
       <Routes>
       <Route path="/" element={<><NavBar/><Add/></>}/>
       <Route path="/view" element={<><NavBar/><View/></>}/>
- 
+      <Route path="/search" element={<><NavBar/><Search/></>}/>
   
 
         </Routes>
