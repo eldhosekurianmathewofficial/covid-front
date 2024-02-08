@@ -3,7 +3,7 @@ import axios from "axios";
 const ViewCountry = () => {
     const[output,setOutput]= new useState([])
     const getData=()=>{
-        axios.get("http://localhost:3005/api/country/view").then(
+        axios.get("http://localhost:3005/api/covidapp/view").then(
             (response)=>{
                 setOutput(response.data.countrydat)
             }

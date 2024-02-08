@@ -17,7 +17,7 @@ const Add = () => {
     }
     const readValues=()=>{
         console.log(input)
-        axios.post("http://localhost:3005/api/country/add",input).then(
+        axios.post("http://localhost:3001/api/covidapp/add",input).then(
             (response)=>{
                 console.log(response.data)
                 if (response.data.status==="success") {
